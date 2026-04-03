@@ -78,12 +78,12 @@
 
 <header>
   <h1>TabLauncher Privacy Policy</h1>
-  <p>Effective date: March 31, 2026</p>
+  <p>Effective date: April 3, 2026</p>
   <p>Developer: olekkdev &middot; <a href="mailto:olekkdev@proton.me">olekkdev@proton.me</a></p>
 </header>
 
 <h2>The Short Version</h2>
-<p>TabLauncher is an Android home screen launcher. Almost everything happens on your device and stays on your device. The only data sent off-device is anonymous crash reports through Firebase Crashlytics, and you can opt out of that.</p>
+<p>TabLauncher is an Android home screen launcher. Almost everything happens on your device and stays on your device. The only data sent off-device is anonymous crash reports (Firebase Crashlytics) and anonymous usage analytics (Firebase Analytics). Both are opt-out in the app settings.</p>
 
 <h2>Data That Stays on Your Device</h2>
 <div class="card">
@@ -94,7 +94,7 @@
     <li><strong>Organization data</strong> (tabs, categories, pinned apps) &mdash; stored in a local Room database</li>
     <li><strong>App icons</strong> &mdash; held in memory only, never written to disk</li>
     <li><strong>System wallpaper</strong> &mdash; read to render the app drawer background with a dark overlay, held in memory only</li>
-    <li><strong>Time, date, battery level</strong> &mdash; displayed on the home screen, never stored or transmitted</li>
+    <li><strong>Time and date</strong> &mdash; displayed on the home screen, never stored or transmitted</li>
   </ul>
 </div>
 
@@ -102,14 +102,16 @@
 <p><strong>Manual backup:</strong> You can export your settings and organization data as a JSON file using the in-app backup feature. The file is saved to a location you choose via the system file picker. It contains tabs, categories, pinned apps, and settings. It does <em>not</em> include wallpaper images, app icons, or any personal content.</p>
 <p><strong>Android Auto Backup:</strong> Your settings and database may be backed up to your Google Drive through standard Android backup, operated by Google LLC (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>). This is controlled by your device's backup settings and your Google account&mdash;not by TabLauncher. Legal basis: your consent via device backup opt-in.</p>
 
-<h2>Data Sent Off-Device (Crash Reports)</h2>
+<h2>Data Sent Off-Device</h2>
+
+<h3>Crash Reports &mdash; Firebase Crashlytics</h3>
 <div class="card">
   <p>TabLauncher uses <strong>Firebase Crashlytics</strong> (operated by Google LLC) to collect anonymous crash reports. When the app crashes, the following is sent:</p>
   <ul>
     <li>Crash stack traces</li>
     <li>Crashlytics installation UUID (anonymous, per-install, reset on reinstall)</li>
     <li>Device model, OS version, orientation</li>
-    <li>RAM, disk space, battery state</li>
+    <li>RAM, disk space</li>
     <li>Whether the device is rooted</li>
     <li>App version name and code</li>
     <li>Crash timestamp</li>
@@ -119,8 +121,26 @@
   <p><strong>Legal basis:</strong> Legitimate interest in maintaining a stable, reliable app.</p>
   <p><strong>Encryption:</strong> All crash data is encrypted in transit using TLS.</p>
   <p><strong>Retention:</strong> Crash data is retained for 90 days. Aggregated crash-free statistics may be retained longer.</p>
-  <p><strong>Opt out:</strong> You can disable crash reporting in the app settings. If you need help, contact <a href="mailto:olekkdev@proton.me">olekkdev@proton.me</a>.</p>
+  <p><strong>Opt out:</strong> You can disable crash reporting in <em>Settings &rarr; About &rarr; Send Crash Reports</em>.</p>
 </div>
+
+<h3>Usage Analytics &mdash; Firebase Analytics</h3>
+<div class="card">
+  <p>TabLauncher uses <strong>Firebase Analytics</strong> (operated by Google LLC) to collect anonymous usage data. The following is sent:</p>
+  <ul>
+    <li>App opens and session duration</li>
+    <li>Firebase installation ID (anonymous, per-install, reset on reinstall)</li>
+    <li>Device model, OS version, language</li>
+    <li>Country or region (derived from IP address; IP is not stored)</li>
+    <li>App version name and code</li>
+  </ul>
+  <p><strong>Purpose:</strong> Understand how the app is used in aggregate to guide product decisions.</p>
+  <p><strong>Legal basis:</strong> Legitimate interest in improving the app experience.</p>
+  <p><strong>Encryption:</strong> All analytics data is encrypted in transit using TLS.</p>
+  <p><strong>Retention:</strong> Event data is retained for 2 months by default. Aggregated reports may be retained longer.</p>
+  <p><strong>Opt out:</strong> You can disable analytics in <em>Settings &rarr; About &rarr; Send Analytics</em>.</p>
+</div>
+
 <p>Third-party privacy policies: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy</a> &middot; <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></p>
 
 <h2 class="not-collected">What We Do NOT Collect</h2>
@@ -132,7 +152,6 @@
     <li>Photos, contacts, or messages</li>
     <li>Browsing history</li>
     <li>Advertising IDs</li>
-    <li>App usage patterns (beyond crash context)</li>
   </ul>
   <p>Your data is <strong>never sold</strong> and is <strong>never used for advertising</strong>.</p>
 </div>
@@ -147,7 +166,7 @@
 </ul>
 
 <h2>International Data Transfer</h2>
-<p>Firebase Crashlytics processes crash data on servers in the United States. These transfers are covered by Google's Standard Contractual Clauses and their data processing terms. No other data leaves your device.</p>
+<p>Firebase Crashlytics and Firebase Analytics process data on servers in the United States. These transfers are covered by Google's Standard Contractual Clauses and their data processing terms. No other data leaves your device.</p>
 
 <h2>Children's Privacy</h2>
 <p>TabLauncher is not directed at children under 13. We do not knowingly collect personal information from children. If you believe a child has provided data through crash reporting, contact us at <a href="mailto:olekkdev@proton.me">olekkdev@proton.me</a> and we will take steps to delete it.</p>
@@ -157,12 +176,12 @@
 <ul>
   <li><strong>Access</strong> the data associated with your device</li>
   <li><strong>Request deletion</strong> of crash data linked to your installation</li>
-  <li><strong>Object</strong> to crash data collection (disable it in-app or contact us)</li>
+  <li><strong>Object</strong> to crash or analytics data collection (disable either in-app under Settings &rarr; About, or contact us)</li>
 </ul>
 <p>To exercise any of these rights, email <a href="mailto:olekkdev@proton.me">olekkdev@proton.me</a>.</p>
 
 <h3>California Residents (CCPA)</h3>
-<p>TabLauncher does <strong>not sell personal information</strong> to any third party. Anonymous crash reports sent to Firebase Crashlytics are used solely for bug fixing and are not shared for advertising or marketing purposes.</p>
+<p>TabLauncher does <strong>not sell personal information</strong> to any third party. Anonymous crash reports and analytics sent to Firebase are used solely for bug fixing and product improvement and are not shared for advertising or marketing purposes.</p>
 
 <h2>Changes to This Policy</h2>
 <p>If this policy changes, the updated version will be posted at this URL with a new effective date. For significant changes, a notice will be included in the app's update notes.</p>
