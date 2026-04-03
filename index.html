@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — TabLauncher</title>
+<style>
+  :root {
+    --bg: #121212;
+    --surface: #1e1e1e;
+    --border: #2a2a2a;
+    --text: #e0e0e0;
+    --text-muted: #9e9e9e;
+    --accent: #82b1ff;
+    --accent-dim: #5c8bc9;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { font-size: 16px; scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Google Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+    line-height: 1.7;
+    padding: 2rem 1.25rem 4rem;
+    max-width: 720px;
+    margin: 0 auto;
+    -webkit-font-smoothing: antialiased;
+  }
+  header { margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+  header h1 { font-size: 1.75rem; font-weight: 600; margin-bottom: .25rem; }
+  header p { color: var(--text-muted); font-size: .9rem; }
+  h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 2.25rem 0 .75rem;
+    color: var(--accent);
+  }
+  h3 { font-size: 1.05rem; font-weight: 600; margin: 1.5rem 0 .5rem; }
+  p { margin-bottom: .75rem; }
+  ul { padding-left: 1.25rem; margin-bottom: .75rem; }
+  li { margin-bottom: .35rem; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .badge {
+    display: inline-block;
+    background: #263238;
+    color: var(--accent);
+    font-size: .78rem;
+    font-weight: 500;
+    padding: .2rem .65rem;
+    border-radius: 6px;
+    margin-right: .4rem;
+    margin-bottom: .3rem;
+  }
+  .not-collected { color: #81c784; }
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: .85rem;
+  }
+  @media (max-width: 480px) {
+    body { padding: 1.5rem 1rem 3rem; }
+    header h1 { font-size: 1.4rem; }
+    h2 { font-size: 1.1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>TabLauncher Privacy Policy</h1>
+  <p>Effective date: March 31, 2026</p>
+  <p>Developer: olekkdev &middot; <a href="mailto:olekkdev@proton.me">olekkdev@proton.me</a></p>
+</header>
+
+<h2>The Short Version</h2>
+<p>TabLauncher is an Android home screen launcher. Almost everything happens on your device and stays on your device. The only data sent off-device is anonymous crash reports through Firebase Crashlytics, and you can opt out of that.</p>
+
+<h2>Data That Stays on Your Device</h2>
+<div class="card">
+  <p>The following data is stored and processed <strong>locally only</strong> and is never sent to any server:</p>
+  <ul>
+    <li><strong>Installed app list</strong> (package names and labels) &mdash; displayed in the launcher drawer; a subset is stored in a local database for tab and category assignments</li>
+    <li><strong>Settings</strong> (clock format, layout preferences, theme) &mdash; stored in Proto DataStore on-device</li>
+    <li><strong>Organization data</strong> (tabs, categories, pinned apps) &mdash; stored in a local Room database</li>
+    <li><strong>App icons</strong> &mdash; held in memory only, never written to disk</li>
+    <li><strong>System wallpaper</strong> &mdash; read to render the app drawer background with a dark overlay, held in memory only</li>
+    <li><strong>Time, date, battery level</strong> &mdash; displayed on the home screen, never stored or transmitted</li>
+  </ul>
+</div>
+
+<h3>Backup &amp; Export</h3>
+<p><strong>Manual backup:</strong> You can export your settings and organization data as a JSON file using the in-app backup feature. The file is saved to a location you choose via the system file picker. It contains tabs, categories, pinned apps, and settings. It does <em>not</em> include wallpaper images, app icons, or any personal content.</p>
+<p><strong>Android Auto Backup:</strong> Your settings and database may be backed up to your Google Drive through standard Android backup, operated by Google LLC (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>). This is controlled by your device's backup settings and your Google account&mdash;not by TabLauncher. Legal basis: your consent via device backup opt-in.</p>
+
+<h2>Data Sent Off-Device (Crash Reports)</h2>
+<div class="card">
+  <p>TabLauncher uses <strong>Firebase Crashlytics</strong> (operated by Google LLC) to collect anonymous crash reports. When the app crashes, the following is sent:</p>
+  <ul>
+    <li>Crash stack traces</li>
+    <li>Crashlytics installation UUID (anonymous, per-install, reset on reinstall)</li>
+    <li>Device model, OS version, orientation</li>
+    <li>RAM, disk space, battery state</li>
+    <li>Whether the device is rooted</li>
+    <li>App version name and code</li>
+    <li>Crash timestamp</li>
+    <li>Device architecture (CPU type)</li>
+  </ul>
+  <p><strong>Purpose:</strong> Identify and fix bugs that cause crashes, improving app stability.</p>
+  <p><strong>Legal basis:</strong> Legitimate interest in maintaining a stable, reliable app.</p>
+  <p><strong>Encryption:</strong> All crash data is encrypted in transit using TLS.</p>
+  <p><strong>Retention:</strong> Crash data is retained for 90 days. Aggregated crash-free statistics may be retained longer.</p>
+  <p><strong>Opt out:</strong> You can disable crash reporting in the app settings. If you need help, contact <a href="mailto:olekkdev@proton.me">olekkdev@proton.me</a>.</p>
+</div>
+<p>Third-party privacy policies: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy</a> &middot; <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></p>
+
+<h2 class="not-collected">What We Do NOT Collect</h2>
+<div class="card">
+  <p>TabLauncher does <strong>not</strong> collect, store, or transmit:</p>
+  <ul class="not-collected">
+    <li>Names, email addresses, or account information</li>
+    <li>Location data</li>
+    <li>Photos, contacts, or messages</li>
+    <li>Browsing history</li>
+    <li>Advertising IDs</li>
+    <li>App usage patterns (beyond crash context)</li>
+  </ul>
+  <p>Your data is <strong>never sold</strong> and is <strong>never used for advertising</strong>.</p>
+</div>
+
+<h2>App Permissions Explained</h2>
+<p>Launchers need a few permissions that may look broad. Here is exactly what each one does and why:</p>
+<ul>
+  <li><span class="badge">QUERY_ALL_PACKAGES</span> Lists the apps installed on your device so they can appear in the launcher drawer. Required for any launcher to function.</li>
+  <li><span class="badge">REQUEST_DELETE_PACKAGES</span> Lets you trigger an app uninstall from the launcher. The system still shows a confirmation dialog&mdash;nothing is removed without your approval.</li>
+  <li><span class="badge">SET_WALLPAPER</span> Sets a new wallpaper when you pick a custom background image in settings.</li>
+  <li><span class="badge">READ_EXTERNAL_STORAGE / READ_MEDIA_IMAGES</span> Reads your current system wallpaper bitmap purely in memory to render the app drawer background. The image is never stored or transmitted. On Android 13+, the narrower READ_MEDIA_IMAGES permission is used instead.</li>
+</ul>
+
+<h2>International Data Transfer</h2>
+<p>Firebase Crashlytics processes crash data on servers in the United States. These transfers are covered by Google's Standard Contractual Clauses and their data processing terms. No other data leaves your device.</p>
+
+<h2>Children's Privacy</h2>
+<p>TabLauncher is not directed at children under 13. We do not knowingly collect personal information from children. If you believe a child has provided data through crash reporting, contact us at <a href="mailto:olekkdev@proton.me">olekkdev@proton.me</a> and we will take steps to delete it.</p>
+
+<h2>Your Rights</h2>
+<p>Depending on your jurisdiction, you may have the right to:</p>
+<ul>
+  <li><strong>Access</strong> the data associated with your device</li>
+  <li><strong>Request deletion</strong> of crash data linked to your installation</li>
+  <li><strong>Object</strong> to crash data collection (disable it in-app or contact us)</li>
+</ul>
+<p>To exercise any of these rights, email <a href="mailto:olekkdev@proton.me">olekkdev@proton.me</a>.</p>
+
+<h3>California Residents (CCPA)</h3>
+<p>TabLauncher does <strong>not sell personal information</strong> to any third party. Anonymous crash reports sent to Firebase Crashlytics are used solely for bug fixing and are not shared for advertising or marketing purposes.</p>
+
+<h2>Changes to This Policy</h2>
+<p>If this policy changes, the updated version will be posted at this URL with a new effective date. For significant changes, a notice will be included in the app's update notes.</p>
+
+<footer>
+  <p>TabLauncher &middot; <code>com.olekkdev.tablauncher</code></p>
+  <p>Questions? <a href="mailto:olekkdev@proton.me">olekkdev@proton.me</a></p>
+</footer>
+
+</body>
+</html>
